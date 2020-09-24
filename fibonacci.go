@@ -31,14 +31,10 @@ func print_nth_fib(n int) int {
   f0 := 0
   f1 := 1
 
-  switch n {
-  case 0:
+  if n == 0 {
     return f0
-  case 1:
-    return f1
   }
-
-  for i := 0; i < n; i++{
+  for i := 1; i < n; i++{
     temp := f1
     f1 = f0 + f1
     f0 = temp
